@@ -1,0 +1,14 @@
+.custom-dropdown {
+    font-size: 14px; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+   /* margin-top: 60px;
+    margin-left: 50%; */
+    /* width:1200px; */
+  }
+  /* .pool{
+    justify-content: center;
+    margin-left: 50%;
+  } */
+  
