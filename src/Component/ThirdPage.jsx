@@ -92,11 +92,10 @@ const ThirdPage = () => {
 
 
     const calculatetotalPrice = () => {
-        const arival = new Date(arrivalDate);
-        const departure = new Date(departureDate);
-        const totalNights = ((departure - arival) / (1000 * 60 * 60 * 24));
-        return totalNights ;
-        
+        const tax =0.12
+        const tax_amount=totalPrice*tax; 
+        return tax_amount ;
+
        
     }
 
@@ -130,7 +129,8 @@ const ThirdPage = () => {
 
             </form>
             <h5>Your Stay Cost Will Be:{totalPrice} </h5>
-            <h5>Your Stay Cost After 12% Tax will be:{totalTax} </h5>
+            <h5>12% Tax will be:{calculatetotalPrice()} </h5>
+            <h5>subTotal:{totalPrice}*{calculatetotalPrice()}</h5>
 
 
             <Link to={`/ForthPage/${hotals.id}`}> <button type="submit" onClick={handleSubmit} class="btn btn-primary">Submit</button></Link>
