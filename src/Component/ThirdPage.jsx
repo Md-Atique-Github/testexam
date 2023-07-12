@@ -95,9 +95,8 @@ const ThirdPage = () => {
         const tax =0.12
         const tax_amount=totalPrice*tax; 
         return tax_amount ;
-
-       
     }
+    const subTotal = totalPrice + calculatetotalPrice();
 
 
     return (
@@ -130,7 +129,7 @@ const ThirdPage = () => {
             </form>
             <h5>Your Stay Cost Will Be:{totalPrice} </h5>
             <h5>12% Tax will be:{calculatetotalPrice()} </h5>
-            <h5>subTotal:{totalPrice}*{calculatetotalPrice()}</h5>
+            <h5>subTotal:{subTotal}</h5>
 
 
             <Link to={`/ForthPage/${hotals.id}`}> <button type="submit" onClick={handleSubmit} class="btn btn-primary">Submit</button></Link>
